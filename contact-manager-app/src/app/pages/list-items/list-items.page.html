@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button mode="ios" (click)="back()">
+                <ion-icon color="light" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Dealers / Localidades</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ng-container *ngFor="let dealer of dealers">
+            <ion-item (click)="back(dealer)">
+                <ion-label>{{ dealer.name }} / {{ getLocalityName(dealer.locality_id) }} </ion-label>
+                <ion-icon color="dark" name="ios-arrow-forward"></ion-icon>
+            </ion-item>
+        </ng-container>
+    </ion-list>
+</ion-content>

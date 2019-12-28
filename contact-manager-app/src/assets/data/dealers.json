@@ -1,0 +1,36 @@
+[{
+        "id": 1,
+        "locality_id": 1,
+        "name": "Dealer 1"
+    },
+    {
+        "id": 2,
+        "locality_id": 1,
+        "name": "Dealer 2"
+    },
+    {
+        "id": 3,
+        "locality_id": 2,
+        "name": "Dealer 3"
+    },
+    {
+        "id": 4,
+        "locality_id": 3,
+        "name": "Dealer 4"
+    },
+    {
+        "id": 5,
+        "locality_id": 1,
+        "name": "Dealer 5"
+    },
+    {
+        "id": 6,
+        "locality_id": 2,
+        "name": "Dealer 6"
+    },
+    {
+        "id": 7,
+        "locality_id": 2,
+        "name": "Dealer 7"
+    }
+]

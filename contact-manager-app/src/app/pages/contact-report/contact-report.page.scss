@@ -1,0 +1,37 @@
+    .searchbar-container {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background: #ffffff !important;
+        z-index: 100;
+    }
+    
+    .dropdowm-icon {
+        float: right;
+        position: relative;
+        top: 29px;
+        color: #a09c9c;
+        // right: 10px;
+    }
+    
+    .dropdowm-input {
+        border-bottom: 1px solid #c4bebe;
+        font-weight: bold;
+    }
+    
+    .header-report {
+        padding: 10px 10px 10px;
+        font-size: 1em;
+        border-bottom: 1px solid #bfb9b9;
+    }
+    
+    .row-container {
+        border-bottom: 1px solid #bfb9b9;
+    }
+    
+    .row-container>ion-col {
+        font-size: 0.7em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }

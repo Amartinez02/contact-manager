@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button color="light"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ (contact?.name) ? contact?.name : "Nuevo contacto" }}</ion-title>
+        <ion-buttons class="header-btn" *ngIf="readonlyInput" slot="secondary">
+            <ion-button mode="ios" (click)="deleteContact()">
+                <ion-icon color="light" slot="end" name="md-trash"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size="12">
+                <ion-item>
+                    <ion-label position="floating">Nombre</ion-label>
+                    <ion-input type="text" [(ngModel)]="contact.name" [disabled]="readonlyInput"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Telefono</ion-label>
+                    <ion-input type="tel" [(ngModel)]="contact.phone" [disabled]="readonlyInput"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Correo electronico</ion-label>
+                    <ion-input type="email" [(ngModel)]="contact.email" [disabled]="readonlyInput"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-icon class="dropdowm-icon" name="ios-arrow-down"></ion-icon>
+                    <ion-label position="floating">Dealer</ion-label>
+                    <ion-input class="dropdowm-input" [value]="dealer" [disabled]="readonlyInput" readonly="true" (click)="listDealer()"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Dirección</ion-label>
+                    <ion-textarea type="address" [(ngModel)]="contact.address" [disabled]="readonlyInput"></ion-textarea>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" class="ion-padding-top" text-center>
+                <ion-button shape="round" color="light" (click)="btnClick()"> {{ btnText }}</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

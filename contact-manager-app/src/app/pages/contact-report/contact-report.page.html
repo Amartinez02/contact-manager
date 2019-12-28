@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-buttons slot="start">
+                <ion-menu-button color="light"></ion-menu-button>
+            </ion-buttons>
+        </ion-buttons>
+
+        <ion-title>Reporte de Contactos</ion-title>
+
+        <ion-buttons slot="end">
+            <ion-button mode="ios" (click)="downloadPDF()">
+                <ion-icon color="light" name="md-download"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+
+    <div class="searchbar-container">
+        <ion-grid fixed>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-icon class="dropdowm-icon" name="ios-arrow-down"></ion-icon>
+                    <ion-input class="dropdowm-input" [value]="dealerLocality" placeholder="Dealers" readonly="true" (click)="listDealer()"></ion-input>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-header>
+
+<ion-content>
+
+    <!-- <div class="header-report" *ngIf="locality || dealer"><b>{{ dealer }} / {{ getLocalityName(locality) }}</b></div> -->
+
+    <ion-grid fixed>
+        <ion-row class="row-container">
+            <ion-col size="4"> <b>Nombre</b></ion-col>
+            <ion-col size="3"> <b>Teléfono</b></ion-col>
+            <ion-col size="5"> <b>Correo Electronico</b></ion-col>
+        </ion-row>
+
+        <ng-container *ngFor="let contact of contacts">
+            <ng-container *ngIf="contact.dealer === dealer && contact.locality === locality">
+                <ion-row class="row-container">
+                    <ion-col size="4"> {{ contact.name }}</ion-col>
+                    <ion-col size="3"> {{ contact.phone }}</ion-col>
+                    <ion-col size="5"> {{ contact.email }}</ion-col>
+                </ion-row>
+            </ng-container>
+        </ng-container>
+    </ion-grid>
+</ion-content>4

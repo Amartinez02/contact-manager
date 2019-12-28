@@ -1,0 +1,7 @@
+{
+  "name": "contact-manager",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

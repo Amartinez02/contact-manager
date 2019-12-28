@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-buttons slot="start">
+                <ion-menu-button color="light"></ion-menu-button>
+            </ion-buttons>
+        </ion-buttons>
+
+        <ion-title>Contactos</ion-title>
+
+        <ion-buttons slot="end">
+            <ion-button mode="ios" routerLink="/contact-detail">
+                <ion-icon color="light" name="md-add"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+
+    <div class="searchbar-container">
+        <ion-searchbar placeholder="Nombre / Teléfono" showCancelButton="never" [(ngModel)]="searchText">
+        </ion-searchbar>
+    </div>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-list>
+        <ng-container *ngFor="let contact of contacts">
+            <ng-container *ngIf="((contact.name + contact.phone).toLowerCase()).indexOf(searchText.toLowerCase()) > -1">
+                <ion-item (click)="contactDetail(contact)">
+                    <ion-avatar slot="start">
+                        <img src="../../../assets/icon/avatar.png">
+                    </ion-avatar>
+                    <ion-label>
+                        <h2>{{ contact.name }}</h2>
+                        <h6>{{ contact.phone }}</h6>
+                        <p>{{ contact.dealer }} / {{ getLocalityName(contact.locality) }}</p>
+                    </ion-label>
+                    <ion-icon name="ios-arrow-forward"></ion-icon>
+                </ion-item>
+            </ng-container>
+        </ng-container>
+
+        <div class="no-record" *ngIf="!availableContact">
+            No hay contactos disponibles, <br> presiona <b style="font-size: 1.2em;">+</b> para agregar uno.
+        </div>
+    </ion-list>
+</ion-content>
