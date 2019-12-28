@@ -1,5 +1,5 @@
 # contact-manager
-Aplicacion móvil en Ionic 4 para gestionar contactos - Backend en Nodejs, Express, TypeORM, MongoDB
+Aplicación móvil en Ionic 4 para gestionar contactos - Backend en Nodejs, Express, TypeORM, MongoDB
 
 # Guiar para poner en funcinamiento la aplicacion móvil contact-manager-app
 
@@ -8,7 +8,7 @@ Aplicacion móvil en Ionic 4 para gestionar contactos - Backend en Nodejs, Expre
     $ docker pull mongo
     $ docker run --name mongodb -d -p 27017:27017 mongo
     
-2 - Entrar al proyecto contact-manager-backend y ejecutar el siguiente para instalar todas las dependecias del proyecto:
+2 - Entrar al proyecto contact-manager-backend y ejecutar la siguiente instrucción para instalar todas las dependecias del proyecto:
     
     $ npm i 
     
@@ -16,7 +16,9 @@ Aplicacion móvil en Ionic 4 para gestionar contactos - Backend en Nodejs, Expre
 
     $ npm start
 
-4 - Por ultimo, entrar al proyecto de ionic contact-manager-app y ejecutar los siguientes comandos para instalar las dependecias de la aplicacion y luego subirla desde el browser:
+4 - Por último, entrar al proyecto de ionic contact-manager-app y ejecutar los siguientes comandos para instalar las dependecias de la aplicación y luego subirla desde el browser:
     
     $ npm i
     $ ionic serve
+    $ ionic cordova run ios (ejecutar en teléfono ios o emulador)
+    $ ionic cordova run android (ejecutar en teléfono android o emulador)
