@@ -20,5 +20,5 @@ Aplicación móvil en Ionic 4 para gestionar contactos - Backend en Nodejs, Expr
     
     $ npm i
     $ ionic serve
-    $ ionic cordova run ios (ejecutar en teléfono ios o emulador)
-    $ ionic cordova run android (ejecutar en teléfono android o emulador)
+    $ ionic cordova run ios --prod (ejecutar en teléfono ios o emulador)
+    $ ionic cordova run android --prod (ejecutar en teléfono android o emulador)
