@@ -1,7 +1,7 @@
 # contact-manager
 Aplicación móvil en Ionic 4 para gestionar contactos - Backend en Nodejs, Express, TypeORM, MongoDB
 
-# Guiar para poner en funcinamiento la aplicacion móvil contact-manager-app
+# Guiar para poner en funcinamiento la aplicación móvil contact-manager-app
 
 1 - Ejecutar el siguientes comandos de docker para subir la base de datos de MongoDB:
     
