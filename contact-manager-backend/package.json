@@ -41,7 +41,7 @@
         "supertest": "^3.4.2",
         "tweetnacl": "^1.0.1",
         "tweetnacl-util": "^0.15.0",
-        "typeorm": "^0.2.13",
+        "typeorm": "^0.2.25",
         "typescript": "^3.2.2"
     },
     "devDependencies": {
